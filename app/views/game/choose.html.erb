@@ -1,0 +1,19 @@
+<h1>Rock, Paper, Scissors</h1>
+<hr>
+
+<% if @player_choice == nil %>
+  <h2>Let's Play, Choose one:</h2>
+  <ul>
+  <li><a href="/rps?choose=rock">Rock</a></li>
+  <li><a href="/rps?choose=paper">Paper</a></li>
+  <li><a href="/rps?choose=scissors">Scissors</a></li>
+  </ul>
+<% else %>
+  <h4><a href="/rps">Play Again</a></h4>
+  <hr>
+  <h3>You played: <%= @player_choice.upcase %></h3>
+  <h3>Computer played: <%= @system_choice.upcase %></h3>
+  <h2><%= @game_over %></h2>
+
+<% end %>
+
